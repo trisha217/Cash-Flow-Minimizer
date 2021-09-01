@@ -1,5 +1,5 @@
- import java.io.*;
- import java.util.*;
+
+import java.util.*;
 public class MinimizeCashFlowTest {
 
     public static void minimumCashFlow(int[][] graph) {
@@ -66,6 +66,17 @@ public class MinimizeCashFlowTest {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println();
+        System.out.println("Enter the number of friends?");
+        int n = sc.nextInt();
+        int[][] graph = new int[n][n];
+        System.out.println("Enter the cost matrix");
+        for(int i =0;i<n;i++)
+        {
+            for(int j =0;j<n;j++)
+            {
+                graph[i][j] = sc.nextInt();
+            }
+        }
+        minimumCashFlow(graph);
     }
 }
